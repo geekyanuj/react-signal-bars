@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SignalBars({
     strength = 4,
     bars = 5,
@@ -24,10 +26,9 @@ export default function SignalBars({
                         style={{
                             width,
                             height: `${(level / bars) * 100}%`,
-                            background:
-                                level <= strength
-                                    ? activeColor
-                                    : inactiveColor,
+                            background: level <= strength
+                                ? activeColor
+                                : inactiveColor,
                             borderRadius: 2,
                             transition: "0.2s",
                         }}

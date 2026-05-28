@@ -16,5 +16,8 @@
   },
   "scripts": {
     "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2"
   }
 }
