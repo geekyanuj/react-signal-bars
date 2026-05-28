@@ -1,16 +1,91 @@
-# React + Vite
+# react-signal-bars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and customizable React component for displaying signal strength bars. Ideal for Wi-Fi indicators, mobile signal strength, network status, or any level-based UI visualization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ⚡ Lightweight and dependency-free
+- 🎨 Fully customizable colors and sizes
+- 📶 Dynamic signal strength rendering
+- ✨ Smooth transition animations
+- 🧩 Simple React component API
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
 
-## Expanding the ESLint configuration
+```bash
+npm install react-signal-bars
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+or
+
+```bash
+yarn add react-signal-bars
+```
+
+---
+
+## Usage
+
+```jsx
+import SignalBars from "react-signal-bars";
+
+export default function App() {
+  return (
+    <SignalBars strength={4} />
+  );
+}
+```
+
+---
+
+## Example
+
+```jsx
+import SignalBars from "react-signal-bars";
+
+export default function App() {
+  return (
+    <div style={{ padding: 20 }}>
+      <SignalBars
+        strength={3}
+        bars={5}
+        activeColor="#22c55e"
+        inactiveColor="#d1d5db"
+        width={8}
+        height={40}
+      />
+    </div>
+  );
+}
+```
+
+---
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|------|------|
+| `strength` | `number` | `4` | Number of active bars |
+| `bars` | `number` | `5` | Total number of bars |
+| `activeColor` | `string` | `#22c55e` | Color of active bars |
+| `inactiveColor` | `string` | `#d1d5db` | Color of inactive bars |
+| `width` | `number` | `6` | Width of each bar |
+| `height` | `number` | `30` | Total height of the signal indicator |
+
+---
+
+## Preview
+
+The component automatically scales bar heights progressively to create a classic signal strength appearance.
+
+```txt
+▂ ▄ ▆ █
+```
+
+---
+
+## License
+
+MIT ©
