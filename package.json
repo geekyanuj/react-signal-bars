@@ -2,13 +2,10 @@
   "name": "react-signal-bars",
   "version": "1.0.0",
   "type": "module",
-  "main": "./dist/react-signal-bars.umd.cjs",
-  "module": "./dist/react-signal-bars.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/react-signal-bars.js",
-      "require": "./dist/react-signal-bars.umd.cjs"
-    }
+    ".": "./dist/index.js"
   },
   "files": [
     "dist"
@@ -19,11 +16,5 @@
   },
   "scripts": {
     "build": "vite build"
-  },
-  "dependencies": {
-    "vite": "^8.0.14"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^6.0.2"
   }
 }

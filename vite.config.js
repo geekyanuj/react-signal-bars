@@ -6,11 +6,17 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.js",
-      name: "ReactSignalBars",
-      fileName: "react-signal-bars",
+      formats: ["es"],
+      fileName: () => "index.js",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
   },
 });
